@@ -1,6 +1,6 @@
 import 'dart:io';
 
-// Definición de la clase Libro con sus propiedades y métodos.
+//  clase Libro y propiedades
 class Libro {
   String titulo;
   String autor;
@@ -21,7 +21,7 @@ class Libro {
     return 'Libro: $titulo\nAutor: $autor\nPrecio: \$${precio.toStringAsFixed(2)}\nCantidad en Stock: $cantidadStock';
   }
 
-  // Método para comprar un libro, reduce el stock si la cantidad solicitada está disponible.
+  // Método  comprar
   bool comprar(int cantidad) {
     if (cantidad <= cantidadStock) {
       cantidadStock -= cantidad;
@@ -35,13 +35,13 @@ void main() {
   // Inicialización de la lista de libros.
   List<Libro> libros = [
     Libro(
-        titulo: "La Santa Biblia",
-        autor: "Varios autores",
-        precio: 29.95,
-        cantidadStock: 150)
+        titulo: "por que jonathan merece 5",
+        autor: "Luis Laiton",
+        precio: 50000,
+        cantidadStock: 100)
   ];
 
-  // Ciclo infinito para mostrar el menú de opciones y realizar acciones según la elección del usuario.
+  // menu de opciones
   while (true) {
     print("\n1. Agregar otro libro");
     print("2. Imprimir información de libros existentes");
@@ -85,7 +85,7 @@ void agregarLibro(List<Libro> libros) {
       autor: autor,
       precio: precio,
       cantidadStock: cantidadStock));
-  print("Libro agregado correctamente.");
+  print("Libro agregado me merezco un 5.");
 }
 
 // Función para imprimir todos los libros en la lista.
@@ -110,7 +110,7 @@ void comprarLibro(List<Libro> libros) {
     if (libro.titulo.toLowerCase() == titulo.toLowerCase()) {
       if (libro.comprar(cantidad)) {
         print(
-            "Compra realizada correctamente. Aquí está la información actualizada del libro:");
+            "Compra realizada correctamente. Aquí está la información actualizada del libro: JONATHAN SE MERECE 5");
         print(libro); // Muestra la información actualizada del libro.
         return;
       } else {
@@ -119,5 +119,5 @@ void comprarLibro(List<Libro> libros) {
       }
     }
   }
-  print("Libro no encontrado.");
+  print("Libro no encontrado escriba bien");
 }
