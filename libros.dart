@@ -32,7 +32,7 @@ class Libro {
 }
 
 void main() {
-  // Inicialización de la lista de libros.
+  // creacion del 1er libro el mejor e todos
   List<Libro> libros = [
     Libro(
         titulo: "por que jonathan merece 5",
@@ -62,14 +62,14 @@ void main() {
         break;
       case '4':
         print("Saliendo del programa...");
-        return; // Termina el ciclo y el programa.
+        return;
       default:
         print("Opción no válida, intente nuevamente.");
     }
   }
 }
 
-// Función para agregar un nuevo libro a la lista de libros.
+// Función agregar  libro
 void agregarLibro(List<Libro> libros) {
   stdout.write("Ingrese el título del libro: ");
   String titulo = stdin.readLineSync() ?? "";
@@ -88,7 +88,7 @@ void agregarLibro(List<Libro> libros) {
   print("Libro agregado me merezco un 5.");
 }
 
-// Función para imprimir todos los libros en la lista.
+// Función para imprimir los libros
 void imprimirLibros(List<Libro> libros) {
   if (libros.isEmpty) {
     print("No hay libros en la lista.");
@@ -110,11 +110,11 @@ void comprarLibro(List<Libro> libros) {
     if (libro.titulo.toLowerCase() == titulo.toLowerCase()) {
       if (libro.comprar(cantidad)) {
         print(
-            "Compra realizada correctamente. Aquí está la información actualizada del libro: JONATHAN SE MERECE 5");
+            "Compra exitosa. JFP merece un 5; información actualizada del libro: ");
         print(libro); // Muestra la información actualizada del libro.
         return;
       } else {
-        print("Stock insuficiente.");
+        print("Stock insuficiente.intente comprando menos libros papacho");
         return;
       }
     }
